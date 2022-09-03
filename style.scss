@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  margin: 3rem;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+body {
+  background-color: rgba($color: #4b3535b7, $alpha: 0.1);
+  font-size: bolder;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+.card {
+  //   border: 1px solid red;
+  width: 33.33%;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 290px;
+    border-radius: 10px;
+  }
+}
+.card-2,
+.card-5 {
+  padding-top: 4rem;
+}
+
+.card-1 {
+  position: relative;
+  .task {
+    transform: rotate(90deg);
+    right: -90px;
+    top: 80px;
+    position: absolute;
+  }
+}
+.card-2 {
+  position: relative;
+  .task {
+    transform: rotate(90deg);
+    left: 275px;
+    top: 200px;
+    position: absolute;
+  }
+}
+.card-3 {
+  position: relative;
+  .task {
+    transform: rotate(90deg);
+    right: -70px;
+    top: 80px;
+    position: absolute;
+  }
+}
+.card-4 {
+  position: relative;
+  .task {
+    transform: rotate(90deg);
+    left: 275px;
+    bottom: 300px;
+    position: absolute;
+  }
+}
+.card-5 {
+  position: relative;
+  .task {
+    transform: rotate(90deg);
+    left: 260px;
+    bottom: 300px;
+    position: absolute;
+  }
+}
+.card-6 {
+  position: relative;
+  .task {
+    transform: rotate(90deg);
+    right: -70px;
+    bottom: 300px;
+    position: absolute;
+  }
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(90%);
+  transition: all 1.5s;
+}
+
+@media screen and (max-width: 1053px) {
+  .card {
+    width: 50%;
+  }
+  .card-2,
+  .card-4,
+  .card-6 {
+    padding-top: 4rem;
+  }
+  .card-5 {
+    padding-top: 0;
+  }
+  .card-1 .task {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 235px;
+    top: 100px;
+    // border: 1px solid red;
+    width: 50%;
+  }
+  .card-2 .task {
+    transform: rotate(90deg);
+    position: absolute;
+    right: -55px;
+    top: 135px;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header {
+    width: 100%;
+  }
+  .paragraf {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  main {
+    flex-direction: column;
+  }
+  .header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .card-2,
+  .card-4 {
+    padding-bottom: 4rem;
+  }
+}
